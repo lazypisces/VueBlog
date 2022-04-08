@@ -31,9 +31,9 @@ export default defineUserConfig<DefaultThemeOptions>({
         // ],
         //導航欄
         navbar: [
-            { text: 'Home', link: '/' },  //text:導航標題內容
+            { text: '🏠首頁', link: '/' },  //text:導航標題內容
             {
-                text: '指南',
+                text: '📙指南',
                 children: [
                     { text: '快速上手', link: '/StockProfolioDocs/QuickStart/介紹.md', activeMatch: '^/StockProfolioDocs/QuickStart/',  },
                     { text: '基本功能', link: '/StockProfolioDocs/Introduction/儀表板.md', activeMatch: '^/StockProfolioDocs/Introduction/',  },
@@ -41,7 +41,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                 ]
             },
             {
-                text: '版本',
+                text: '📝版本',
                 children: [
                     { text: '台股免費版', link: '/StockProfolioDocs/' },
                     { text: '台股付費版', link: '/StockProfolioDocs/' },
@@ -49,14 +49,8 @@ export default defineUserConfig<DefaultThemeOptions>({
                     { text: '客製化(含範例)', link: '/StockProfolioDocs/' },
                 ]
             },
-            {
-                text: 'Contact',
-                children: [
-                    { text: '懶魚', link: '/' },
-                    { text: 'Markdown語法', link: '/StockProfolioDocs/Introduction/Introduction0.md'},
-                ]
-            },
-            { text: '贊助', link: 'https://payment.ecpay.com.tw/Broadcaster/Donate/C014318DF58EE9F80D220D97FB4FE5C8' },
+            { text: '🙍‍♂️聯繫我', link: '/Contact' },
+            { text: '💰贊助', link: 'https://payment.ecpay.com.tw/Broadcaster/Donate/C014318DF58EE9F80D220D97FB4FE5C8' },
         ],
         // sidebar: 'auto',
         sidebar: {
