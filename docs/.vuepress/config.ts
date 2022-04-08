@@ -37,7 +37,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                 children: [
                     { text: '快速上手', link: '/StockProfolioDocs/QuickStart/介紹.md', activeMatch: '^/StockProfolioDocs/QuickStart/',  },
                     { text: '基本功能', link: '/StockProfolioDocs/Introduction/儀表板.md', activeMatch: '^/StockProfolioDocs/Introduction/',  },
-                    { text: '進階功能', link: '/StockProfolioDocs/PayOnly/進階功能簡介.md', activeMatch: '^/StockProfolioDocs/PayOnly/', },
+                    { text: '進階功能', link: '/StockProfolioDocs/PayOnly/進階簡介.md', activeMatch: '^/StockProfolioDocs/PayOnly/', },
                 ]
             },
             {
