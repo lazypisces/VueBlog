@@ -1,11 +1,11 @@
 ---
 lang: zh-TW
-title: 頁面的標題
-description: 頁面的描述
+title: 懶魚's
+description: 一份專為懶人而生的股票管理表。功能豐富、完整，還自動化!! 讓你輕輕鬆鬆管理股票
 home: true
 # heroImage: /images/台股付費版-儀表板.jpg
-heroText: Vue 標題
-tagline: Vue 副標題
+heroText: 全自動股票管理表
+tagline: 一份專為懶人而生的股票管理表
 actionText: 快速上手 →
 actionLink: /StockProfolioDocs/
 
