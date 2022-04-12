@@ -12,6 +12,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     // 主题和它的配置
     theme: '@vuepress/theme-default',
     themeConfig: {
+        // search: true,
         logo: 'https://vuejs.org/images/logo.png',
         contributorsText:"作者",
         lastUpdatedText:"最後更新",
@@ -43,10 +44,10 @@ export default defineUserConfig<DefaultThemeOptions>({
             {
                 text: '📝版本',
                 children: [
-                    { text: '台股免費版', link: '/StockProfolioDocs/' },
-                    { text: '台股付費版', link: '/StockProfolioDocs/' },
-                    { text: '美股付費版', link: '/StockProfolioDocs/' },
-                    { text: '客製化(含範例)', link: '/StockProfolioDocs/' },
+                    { text: '台股免費版', link: '/StockProfolioDocs/Version/免費版.md', activeMatch: '^/StockProfolioDocs/Version/%E5%85%8D%E8%B2%BB%E7%89%88', },
+                    { text: '台股付費版', link: '/StockProfolioDocs/Version/付費版.md' },
+                    { text: '美股付費版', link: '/StockProfolioDocs/Version/美股版.md' },
+                    { text: '客製化(含範例)', link: '/StockProfolioDocs/Version/客製化.md' },
                 ]
             },
             { text: '🙍‍♂️聯繫我', link: '/Contact' },
