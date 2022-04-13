@@ -3,7 +3,7 @@ lang: zh-TW
 title: 懶魚's
 description: 一份專為懶人而生的股票管理表。功能豐富、完整，還自動化!! 讓你輕輕鬆鬆管理股票
 home: true
-# heroImage: /images/台股付費版-儀表板.jpg
+# heroImage: /images/台股收費版-儀表板.jpg
 heroText: 全自動股票管理表
 tagline: 一份專為懶人而生的股票管理表
 actionText: 快速上手 →

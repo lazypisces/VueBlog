@@ -36,8 +36,8 @@ export default defineUserConfig<DefaultThemeOptions>({
             {
                 text: '📙指南',
                 children: [
-                    { text: '快速上手', link: '/StockProfolioDocs/QuickStart/介紹.md', activeMatch: '^/StockProfolioDocs/QuickStart/',  },
-                    { text: '基本功能', link: '/StockProfolioDocs/Introduction/儀表板.md', activeMatch: '^/StockProfolioDocs/Introduction/',  },
+                    { text: '快速上手', link: '/StockProfolioDocs/QuickStart/介紹.md', activeMatch: '^/StockProfolioDocs/QuickStart/', },
+                    { text: '基本功能', link: '/StockProfolioDocs/Introduction/儀表板.md', activeMatch: '^/StockProfolioDocs/Introduction/', },
                     { text: '進階功能', link: '/StockProfolioDocs/PayOnly/進階簡介.md', activeMatch: '^/StockProfolioDocs/PayOnly/', },
                 ]
             },
@@ -45,16 +45,19 @@ export default defineUserConfig<DefaultThemeOptions>({
                 text: '📝版本',
                 children: [
                     { text: '台股免費版', link: '/StockProfolioDocs/Version/免費版.md', activeMatch: '^/StockProfolioDocs/Version/%E5%85%8D%E8%B2%BB%E7%89%88', },
-                    { text: '台股付費版', link: '/StockProfolioDocs/Version/付費版.md' },
-                    { text: '美股付費版', link: '/StockProfolioDocs/Version/美股版.md' },
-                    { text: '客製化(含範例)', link: '/StockProfolioDocs/Version/客製化.md' },
+                    { text: '台股收費版', link: '/StockProfolioDocs/Version/收費版.md', activeMatch: '^/StockProfolioDocs/Version/%E6%94%B6%E8%B2%BB%E7%89%88', },
+                    { text: '美股收費版', link: '/StockProfolioDocs/Version/美股版.md', activeMatch: '^/StockProfolioDocs/Version/%E7%BE%8E%E8%82%A1%E7%89%88', },
+                    { text: '客製化(含案例)', link: '/StockProfolioDocs/Version/客製化.md', activeMatch: '^/StockProfolioDocs/Version/%E5%AE%A2%E8%A3%BD%E5%8C%96', },
                 ]
             },
             { text: '🙍‍♂️聯繫我', link: '/Contact' },
-            { text: '💰贊助', link: 'https://payment.ecpay.com.tw/Broadcaster/Donate/C014318DF58EE9F80D220D97FB4FE5C8' },
+            { text: '💰贊助', link: '/Contact#贊助' },
         ],
         // sidebar: 'auto',
         sidebar: {
+            '/StockProfolioDocs/Version/%E5%AE%A2%E8%A3%BD%E5%8C%96': [
+                '',
+            ],
             '/StockProfolioDocs/': [
                 // '/StockProfolioDocs/',
                 // '/StockProfolioDocs/Introduction/',
