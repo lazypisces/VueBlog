@@ -13,11 +13,11 @@
 
 - [信用卡支付連結](https://payment.ecpay.com.tw/Broadcaster/Donate/C014318DF58EE9F80D220D97FB4FE5C8)
 
-![王道銀行](../docs/.vuepress/public/images/../../dist/images/綠界_贊助QR.png)
+  ![綠界_贊助QR](../docs/.vuepress/public/images/綠界_贊助QR.png)
 
 - 數位銀行轉帳
 
-![王道銀行](../docs/.vuepress/public/images/王道銀行.jpg)
+  ![王道銀行](../docs/.vuepress/public/images/王道銀行.jpg)
 
 ## 聯繫懶魚
 
