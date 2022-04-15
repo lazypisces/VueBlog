@@ -6,7 +6,10 @@ export default defineUserConfig<DefaultThemeOptions>({
     // lang: 'en-US',
     lang: 'zh-TW',
     title: '全自動股票管理表',
-    description: 'Just playing around',
+    description: '一份專為懶人而生的股票管理表。功能豐富、完整，還自動化!! 讓你輕輕鬆鬆管理股票',
+    head: [
+        ['meta', { name: 'google-site-verification', content: 'KoSwtocMBBPetZW_qAT1plr-FyvpTMWj5Rpt14AUf5s' }]
+    ],
     base: '/MyBlog/',
 
     // 主题和它的配置
@@ -112,6 +115,38 @@ export default defineUserConfig<DefaultThemeOptions>({
             {
               id: 'G-8PLR7JY5SH',
             },
+        ],
+        [
+            'sitemap',
+            {
+                hostname: 'https://lazypisces.github.io/MyBlog/',
+                exclude: ["/404.html"],
+            }
+        ],
+        [
+            'autometa', {
+                site: {
+                    name: 'Lazy Pisces',
+                    keywords: ['股票管理','自動化範本','股票excel'],
+                },
+                canonical_base: 'https://lazypisces.github.io/MyBlog/',
+            }
+        ],
+        [
+            'seo',
+            {
+                siteTitle: (_, $site) => $site.title,
+                title: $page => $page.title,
+                description: $page => $page.frontmatter.description,
+                author: (_, $site) => $site.themeConfig.author,
+                tags: $page => $page.frontmatter.tags,
+                // twitterCard: _ => 'summary_large_image',
+                type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+                url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
+                image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image),
+                publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
+                modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+            }
         ],
     ],
 })
