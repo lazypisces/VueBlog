@@ -1,7 +1,8 @@
-import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
+import { defineUserConfig, defaultTheme } from 'vuepress'
+const { googleAnalyticsPlugin } = require('@vuepress/plugin-google-analytics')
+const { searchPlugin } = require('@vuepress/plugin-search')
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
     // 站点配置
     // lang: 'en-US',
     lang: 'zh-TW',
@@ -13,8 +14,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     base: '/MyBlog/',
 
     // 主题和它的配置
-    theme: '@vuepress/theme-default',
-    themeConfig: {
+    theme: defaultTheme({
         // search: true,
         logo: 'https://vuejs.org/images/logo.png',
         contributorsText:"作者",
@@ -95,58 +95,27 @@ export default defineUserConfig<DefaultThemeOptions>({
                 },
             ],
         }
-    },
+    }),
     plugins: [
-        [
-            '@vuepress/plugin-search',
-            {
+        searchPlugin({
                 locales: {
                     '/': {
                         placeholder: 'Search',
                     },
                     '/zh/': {
-                        placeholder: '搜索',
+                        placeholder: '搜尋',
                     },
                 },
+        }),
+        googleAnalyticsPlugin({
+            id: 'G-8PLR7JY5SH',
+        }),
+        [
+            "sitemap",
+            {
+              // 配置選項
+              hostname:'https://lazypisces.github.io/MyBlog/',
             },
-        ],
-        [
-            '@vuepress/plugin-google-analytics',
-            {
-              id: 'G-8PLR7JY5SH',
-            },
-        ],
-        [
-            'sitemap',
-            {
-                hostname: 'https://lazypisces.github.io/MyBlog/',
-                exclude: ["/404.html"],
-            }
-        ],
-        [
-            'autometa', {
-                site: {
-                    name: 'Lazy Pisces',
-                    keywords: ['股票管理','自動化範本','股票excel'],
-                },
-                canonical_base: 'https://lazypisces.github.io/MyBlog/',
-            }
-        ],
-        [
-            'seo',
-            {
-                siteTitle: (_, $site) => $site.title,
-                title: $page => $page.title,
-                description: $page => $page.frontmatter.description,
-                author: (_, $site) => $site.themeConfig.author,
-                tags: $page => $page.frontmatter.tags,
-                // twitterCard: _ => 'summary_large_image',
-                type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
-                url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-                image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image),
-                publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
-                modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
-            }
         ],
     ],
 })
