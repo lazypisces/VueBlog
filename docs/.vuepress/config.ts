@@ -66,7 +66,7 @@ export default defineUserConfig({
                 // '/StockProfolioDocs/Introduction/',
                 {
                     text: '快速上手',
-                    collapsable: 'true',
+                    collapsable: true,
                     // collapsible: true,
                     children: [
                         '/StockProfolioDocs/QuickStart/介紹.md',
@@ -75,7 +75,7 @@ export default defineUserConfig({
                 },
                 {
                     text: '基本功能',
-                    collapsable: 'true',
+                    collapsable: true,
                     // collapsible: true,
                     children: [
                         '/StockProfolioDocs/Introduction/儀表板.md',
@@ -87,7 +87,7 @@ export default defineUserConfig({
                 },
                 {
                     text: '⭐進階功能',
-                    collapsable: 'true',
+                    collapsable: true,
                     // collapsible: true,
                     // link: '/StockProfolioDocs/PayOnly/test1.md',
                     children: [
