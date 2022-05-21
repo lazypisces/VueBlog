@@ -13,14 +13,19 @@ actions:
   - text: 快速上手 →
     link: /StockProfolioDocs/QuickStart/快速上手.md
     type: primary
-  - text: 範本預覽
-    link: /StockProfolioDocs/QuickStart/快速上手.md#各版本預覽
+  # - text: 範本預覽
+  #   link: /StockProfolioDocs/QuickStart/快速上手.md#各版本預覽
+  #   type: secondary
+  - text: 文章列表
+    link: /article
     type: secondary
 
 features:
 - title: 自動更新股票成交價
+  icon: play
   details: 開啟後會自動抓取最新成交價(非即時)，並轉換成各種損益計算和圖表。
 - title: 多種視覺化圖表
+  icon: comment-question
   details: 享受一切數據自動計算並與圖表連動，一開啟便自動更新圖表數據。
 - title: 自動計算損益&報酬率
   details: 依據最新抓取的各檔股票成交價，計算 已/未實現的損益和報酬率，並將其圖表化。

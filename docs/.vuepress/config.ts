@@ -1,8 +1,8 @@
 import { defineUserConfig, defaultTheme } from 'vuepress'
 const { googleAnalyticsPlugin } = require('@vuepress/plugin-google-analytics')
 const { searchPlugin } = require('@vuepress/plugin-search')
-// const { sitemap } = require('vuepress-plugin-sitemap')
 import { hopeTheme } from "vuepress-theme-hope";
+import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 
 export default defineUserConfig({
     // 站点配置
@@ -11,7 +11,14 @@ export default defineUserConfig({
     title: '全自動股票管理表',
     description: '一份專為懶人而生的股票管理表。功能豐富、完整，還自動化!! 讓你輕輕鬆鬆管理股票',
     head: [
-        ['meta', { name: 'google-site-verification', content: 'KoSwtocMBBPetZW_qAT1plr-FyvpTMWj5Rpt14AUf5s' }]
+        ['meta', { name: 'google-site-verification', content: 'KoSwtocMBBPetZW_qAT1plr-FyvpTMWj5Rpt14AUf5s' }],
+        [
+            "script", // Fontawesome
+            {
+              src: "https://kit.fontawesome.com/ca37c296c5.js",
+              crossorigin: "anonymous",
+            },
+        ]
     ],
     base: '/MyBlog/',
 
@@ -19,9 +26,10 @@ export default defineUserConfig({
     theme: hopeTheme({
         // search: true,
         logo: 'https://vuejs.org/images/logo.png',
-        contributorsText:"作者",
-        lastUpdatedText:"最後更新",
-
+        contributorsText: "作者",
+        lastUpdatedText: "最後更新",
+        breadcrumb: false,
+        iconPrefix: "fa-solid fa-",
         // navbar: [
         //     // NavbarItem
         //     {
@@ -56,6 +64,7 @@ export default defineUserConfig({
                     { text: '客製化(含案例)', link: '/StockProfolioDocs/Version/客製化.md', activeMatch: '^/StockProfolioDocs/Version/%E5%AE%A2%E8%A3%BD%E5%8C%96', },
                 ]
             },
+            { text: '❓常見問題', icon: '', link: '/article' },
             { text: '🙍‍♂️聯繫我', link: '/Contact' },
             { text: '💰贊助', link: '/Contact#贊助' },
         ],
@@ -66,6 +75,7 @@ export default defineUserConfig({
                 // '/StockProfolioDocs/Introduction/',
                 {
                     text: '快速上手',
+                    icon: 'circle-play',
                     collapsable: true,
                     // collapsible: true,
                     children: [
@@ -75,6 +85,7 @@ export default defineUserConfig({
                 },
                 {
                     text: '基本功能',
+                    icon: '',
                     collapsable: true,
                     // collapsible: true,
                     children: [
@@ -102,6 +113,10 @@ export default defineUserConfig({
             mdEnhance: {
               mark: true,
             },
+            blog: true,
+        },
+        blog:{
+            name: '懶魚',
         },
     }),
     plugins: [
@@ -118,15 +133,9 @@ export default defineUserConfig({
         googleAnalyticsPlugin({
             id: 'G-8PLR7JY5SH',
         }),
-        // sitemap({
-        //     hostname: 'https://lazypisces.github.io/MyBlog/',
-        // }),
-        [
-            "sitemap",
-            {
-              // 配置選項
-              hostname:'https://lazypisces.github.io/MyBlog/',
-            },
-        ],
+        sitemapPlugin({
+            hostname: 'https://lazypisces.github.io/MyBlog/',
+            excludeUrls: ['/test.html'],
+        }),
     ],
 })
