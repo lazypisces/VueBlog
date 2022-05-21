@@ -1,6 +1,8 @@
 import { defineUserConfig, defaultTheme } from 'vuepress'
 const { googleAnalyticsPlugin } = require('@vuepress/plugin-google-analytics')
 const { searchPlugin } = require('@vuepress/plugin-search')
+// const { sitemap } = require('vuepress-plugin-sitemap')
+import { hopeTheme } from "vuepress-theme-hope";
 
 export default defineUserConfig({
     // 站点配置
@@ -14,11 +16,12 @@ export default defineUserConfig({
     base: '/MyBlog/',
 
     // 主题和它的配置
-    theme: defaultTheme({
+    theme: hopeTheme({
         // search: true,
         logo: 'https://vuejs.org/images/logo.png',
         contributorsText:"作者",
         lastUpdatedText:"最後更新",
+
         // navbar: [
         //     // NavbarItem
         //     {
@@ -58,15 +61,13 @@ export default defineUserConfig({
         ],
         // sidebar: 'auto',
         sidebar: {
-            '/StockProfolioDocs/Version/%E5%AE%A2%E8%A3%BD%E5%8C%96': [
-                '',
-            ],
             '/StockProfolioDocs/': [
                 // '/StockProfolioDocs/',
                 // '/StockProfolioDocs/Introduction/',
                 {
                     text: '快速上手',
-                    collapsible: true,
+                    collapsable: 'true',
+                    // collapsible: true,
                     children: [
                         '/StockProfolioDocs/QuickStart/介紹.md',
                         '/StockProfolioDocs/QuickStart/快速上手.md',
@@ -74,7 +75,8 @@ export default defineUserConfig({
                 },
                 {
                     text: '基本功能',
-                    collapsible: true,
+                    collapsable: 'true',
+                    // collapsible: true,
                     children: [
                         '/StockProfolioDocs/Introduction/儀表板.md',
                         '/StockProfolioDocs/Introduction/交易紀錄.md',
@@ -85,7 +87,8 @@ export default defineUserConfig({
                 },
                 {
                     text: '⭐進階功能',
-                    collapsible: true,
+                    collapsable: 'true',
+                    // collapsible: true,
                     // link: '/StockProfolioDocs/PayOnly/test1.md',
                     children: [
                         '/StockProfolioDocs/PayOnly/進階簡介.md',
@@ -94,7 +97,12 @@ export default defineUserConfig({
                     ]
                 },
             ],
-        }
+        },
+        plugins: {
+            mdEnhance: {
+              mark: true,
+            },
+        },
     }),
     plugins: [
         searchPlugin({
@@ -110,6 +118,9 @@ export default defineUserConfig({
         googleAnalyticsPlugin({
             id: 'G-8PLR7JY5SH',
         }),
+        // sitemap({
+        //     hostname: 'https://lazypisces.github.io/MyBlog/',
+        // }),
         [
             "sitemap",
             {

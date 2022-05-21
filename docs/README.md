@@ -1,6 +1,6 @@
 ---
 lang: zh-TW
-title: 懶魚's
+title: 首頁
 description: 一份專為懶人而生的股票管理表。功能豐富、完整，還自動化!! 讓你輕輕鬆鬆管理股票
 home: true
 # heroImage: /images/台股收費版-儀表板.jpg
