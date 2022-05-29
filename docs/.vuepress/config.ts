@@ -3,6 +3,7 @@ const { googleAnalyticsPlugin } = require('@vuepress/plugin-google-analytics')
 const { searchPlugin } = require('@vuepress/plugin-search')
 import { hopeTheme } from "vuepress-theme-hope";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
+import { seoPlugin } from "vuepress-plugin-seo2";
 
 export default defineUserConfig({
     // 站点配置
@@ -111,9 +112,9 @@ export default defineUserConfig({
         },
         plugins: {
             mdEnhance: {
-              mark: true,
+              mark: true, // ==黃底強調==
             },
-            blog: true,
+            blog: true, // 文章列表
         },
         blog:{
             name: '懶魚',
@@ -136,6 +137,10 @@ export default defineUserConfig({
         sitemapPlugin({
             hostname: 'https://lazypisces.github.io/MyBlog/',
             excludeUrls: ['/test.html'],
+        }),
+        seoPlugin({
+            author: '懶魚',
+            hostname: "https://lazypisces.github.io/MyBlog/",
         }),
     ],
 })
