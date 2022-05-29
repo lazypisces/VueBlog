@@ -22,18 +22,24 @@ actions:
 
 features:
 - title: 自動更新股票成交價
-  icon: play
+  icon: rotate 
   details: 開啟後會自動抓取最新成交價(非即時)，並轉換成各種損益計算和圖表。
 - title: 多種視覺化圖表
-  icon: comment-question
+  icon: chart-bar
   details: 享受一切數據自動計算並與圖表連動，一開啟便自動更新圖表數據。
 - title: 自動計算損益&報酬率
+  icon: calculator
   details: 依據最新抓取的各檔股票成交價，計算 已/未實現的損益和報酬率，並將其圖表化。
 - title: 一鍵更新
+  icon: arrow-pointer
+  # icon: computer-mouse
   details: 每次有新的交易要做紀錄時，提供一個按鈕。點按後就可以更新所有圖表和計算的功能。
 - title: 輕鬆管理多家券商
+  icon: building-columns
+  # icon: shop
   details: 靈活的設計使的本表可以同時管理不同的券商並設定不同的折讓手續費，也能看各券商/分類的占比圖。
 - title: 自動記錄市值變化
+  icon: arrow-trend-up
   details: 每周五盤後，會將當下的成本、市值、未實現損益等記錄下來。當時間拉長，可以觀察到自己投資的曲線變化，是付費版的其中一個大功能！
 
 footer: MIT Licensed | Copyright © 2018-present Evan You
