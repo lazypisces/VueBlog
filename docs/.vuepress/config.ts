@@ -1,6 +1,6 @@
 import { defineUserConfig, defaultTheme } from 'vuepress'
-const { googleAnalyticsPlugin } = require('@vuepress/plugin-google-analytics')
-const { searchPlugin } = require('@vuepress/plugin-search')
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
+import { searchPlugin } from '@vuepress/plugin-search';
 import { hopeTheme } from "vuepress-theme-hope";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { seoPlugin } from "vuepress-plugin-seo2";
@@ -9,7 +9,7 @@ export default defineUserConfig({
     // 站点配置
     // lang: 'en-US',
     lang: 'zh-TW',
-    title: '全自動股票管理表',
+    title: '懶魚的全自動股票管理表 - 輕鬆且自動化的股票管理表',
     description: '一份專為懶人而生的股票管理表。功能豐富、完整，還自動化!! 讓你輕輕鬆鬆管理股票',
     head: [
         ['meta', { name: 'google-site-verification', content: 'KoSwtocMBBPetZW_qAT1plr-FyvpTMWj5Rpt14AUf5s' }],
