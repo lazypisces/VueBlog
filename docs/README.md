@@ -5,20 +5,20 @@ description: 一份專為懶人而生的股票管理表。功能豐富、完整�
 home: true
 # heroImage: /images/台股收費版-儀表板.jpg
 heroText: 全自動股票管理表
-tagline: 一份專為懶人而生的股票管理表
+tagline: 一份專為懶人而生的股票管理表，讓你輕輕鬆鬆管理股票
 actionText: 快速上手 →
 actionLink: /StockProfolioDocs/
 
 actions:
   - text: 快速上手 →
-    link: /StockProfolioDocs/QuickStart/快速上手.md
+    link: /StockProfolioDocs/QuickStart/第一次使用.md
     type: primary
-  # - text: 範本預覽
-  #   link: /StockProfolioDocs/QuickStart/快速上手.md#各版本預覽
-  #   type: secondary
-  - text: 文章列表
-    link: /article
+  - text: 試算表預覽
+    link: /StockProfolioDocs/QuickStart/介紹.md#各版本預覽
     type: secondary
+#  - text: Blog
+#    link: /Blog
+#    type: secondary
 
 features:
 - title: 自動更新股票成交價
@@ -56,18 +56,37 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
    :::
 
 #### 3. 啟用一鍵更新 ( 含自動取價 )
-   - 在試算表內點選【儀表版】分頁的按鈕 <Badge text="更新交易紀錄" vertical="middle"/> → 點選 __「進階」__ → 點選  __「前往取得股票現價(不安全)」__ → 點選按鈕 __`允許`__
+   - 在試算表內點選【儀表版】分頁的按鈕 <Badge text="更新交易紀錄" vertical="middle"/> → 點選 __「進階」__ → 點選  __「前往取得股票現價(不安全)」__ → 點選按鈕 <Badge text="允許" vertical="middle"/>
    - 允許後再次點選【儀表版】分頁的按鈕 <Badge text="更新交易紀錄" vertical="middle"/>，確認功能正常
    
    ::: details 啟用示意圖
+   1. 在試算表內點選【儀表版】分頁的按鈕 <Badge text="更新交易紀錄" vertical="middle"/>
+
    ![儀表板按鈕](/images/更新交易紀錄按鈕.jpg)
+
+   2. 點選 __「進階」__ (未經驗證部分可參考 [補充說明](#補充說明))
+
    ![授權步驟1](/images/授權步驟1.jpg)
+
+   3. 點選  __「前往取得股票現價(不安全)」__
+
    ![授權步驟2](/images/授權步驟2.jpg)
+
+   4. 點選按鈕 <Badge text="允許" vertical="middle"/>
+
    ![授權步驟3](/images/授權步驟3.jpg)
    :::
 
-   ::: warning 💡 如有安全上的疑慮，請勿使用此範本。因為不授權基本上這份範本主要功能都不能使用
-   ps. 所有非Google的原生功能(額外添加的)，Google一律會跳出此警告
-   :::
+#### 💡 完成以上3步驟即可開始使用
 
-#### 完成以上3步驟即可開始使用 
+---
+
+#### 補充說明
+
+  :::warning 為了使試算表能更加方便，有寫入一些程式碼做輔助
+  ex.「抓取現價」「一鍵更新」「收費版的自動記錄並圖表化」等，這些功能會需要相應的授權才能使用
+
+  此範本已有眾多的人在使用，程式碼也有經過他人的建議和檢核請放心使用
+
+  ps. 即使如此仍有疑慮的話，請勿使用此範本
+  :::
