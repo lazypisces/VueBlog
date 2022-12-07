@@ -54,19 +54,19 @@ export default defineUserConfig({
                 children: [
                     { text: '快速上手', link: '/StockProfolioDocs/QuickStart/介紹.md', activeMatch: '^/StockProfolioDocs/QuickStart/', },
                     { text: '基本功能', link: '/StockProfolioDocs/Introduction/儀表板.md', activeMatch: '^/StockProfolioDocs/Introduction/', },
-                    { text: '進階功能', link: '/StockProfolioDocs/PayOnly/進階簡介.md', activeMatch: '^/StockProfolioDocs/PayOnly/', },
+                    { text: '進階功能', link: '/StockProfolioDocs/PayOnly/簡介.md', activeMatch: '^/StockProfolioDocs/PayOnly/', },
                 ]
             },
             {
                 text: '📝版本',
                 children: [
-                    { text: '台股免費版', link: '/Version/免費版.md', activeMatch: '^/Version/%E5%85%8D%E8%B2%BB%E7%89%88', },
-                    { text: '台股收費版', link: '/Version/收費版.md', activeMatch: '^/Version/%E6%94%B6%E8%B2%BB%E7%89%88', },
-                    { text: '美股收費版', link: '/Version/美股版.md', activeMatch: '^/Version/%E7%BE%8E%E8%82%A1%E7%89%88', },
+                    { text: '台股免費版', link: '/Version/台股免費版.md', activeMatch: '^/Version/%E5%8F%B0%E8%82%A1%E5%85%8D%E8%B2%BB%E7%89%88', },
+                    { text: '台股收費版', link: '/Version/台股收費版.md', activeMatch: '^/Version/%E5%8F%B0%E8%82%A1%E6%94%B6%E8%B2%BB%E7%89%88', },
+                    { text: '美股收費版', link: '/Version/美股收費版.md', activeMatch: '^/Version/%E7%BE%8E%E8%82%A1%E6%94%B6%E8%B2%BB%E7%89%88', },
                     { text: '客製化(含案例)', link: '/Version/客製化.md', activeMatch: '^/Version/%E5%AE%A2%E8%A3%BD%E5%8C%96', },
                 ]
             },
-            { text: '❓常見問題', icon: '', link: '/article' },
+            { text: '❓常見問題', icon: '', link: '/Q&A/' },
             { text: '🙍‍♂️懶魚', link: '/Contact' },
             { text: '💰贊助', link: '/Contact#贊助' },
         ],
@@ -109,16 +109,16 @@ export default defineUserConfig({
                     // collapsible: true,
                     // link: '/StockProfolioDocs/PayOnly/test1.md',
                     children: [
-                        '/StockProfolioDocs/PayOnly/進階簡介.md',
-                        '/StockProfolioDocs/PayOnly/功能.md',
+                        '/StockProfolioDocs/PayOnly/簡介.md',
+                        '/StockProfolioDocs/PayOnly/進階功能.md',
                         '/StockProfolioDocs/PayOnly/購買.md',
                     ]
                 },
             ],
             '/Version/': [
-                '/Version/免費版',
-                '/Version/收費版',
-                '/Version/美股版',
+                '/Version/台股免費版',
+                '/Version/台股收費版',
+                '/Version/美股收費版',
                 '/Version/客製化',
             ],
         },
@@ -129,11 +129,16 @@ export default defineUserConfig({
             blog:  { // 文章列表
                 autoExcerpt: true, // 自動摘要 > 取自 description
                 filter: ({ filePathRelative }) => // 過濾只顯示在某個路徑下的文章
-                filePathRelative ? filePathRelative.startsWith("StockProfolioDocs/QuickStart/") : false,
+                filePathRelative ? filePathRelative.startsWith("Q&A/") : false,
+                article: 'Q&A', // 修改預設路徑
             },
         },
         blog: {
             name: '懶魚',
+            description: '懶惰是我前進的動力', // 介紹自己的一句話 or 座右銘
+            intro: '/Contact', // 個人介紹頁面的 path
+            // medias:{Gmail:'https://mail.google.com/mail/u/0/?to=pickupcamry@gmail.com&fs=1&tf=cm'},
+            medias: {Gmail:'mailto:pickupcamry@gmail.com',Facebook:'https://www.facebook.com/kevin.lazy.fish'},
             timeline: '至今',
         },
     }),

@@ -2,6 +2,7 @@
 # title: ⏩快速上手
 title: 快速上手
 icon: bolt
+pageInfo: false
 ---
 
  - [介紹](介紹.md)

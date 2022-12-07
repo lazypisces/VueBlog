@@ -2,6 +2,8 @@
 # title: 🚩基本功能
 title: 基本功能
 icon: circle-play
+pageInfo: false
+article: false
 ---
 
  - [儀表板](儀表板.md)
