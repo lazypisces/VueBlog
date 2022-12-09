@@ -139,7 +139,7 @@ export default defineUserConfig({
             intro: '/Contact', // 個人介紹頁面的 path
             // medias:{Gmail:'https://mail.google.com/mail/u/0/?to=pickupcamry@gmail.com&fs=1&tf=cm'},
             medias: {Gmail:'mailto:pickupcamry@gmail.com',Facebook:'https://www.facebook.com/kevin.lazy.fish'},
-            timeline: '至今',
+            timeline: '由此上而下',
         },
     }),
     plugins: [
