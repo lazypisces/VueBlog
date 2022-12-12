@@ -135,6 +135,8 @@ export default defineUserConfig({
         },
         blog: {
             name: '懶魚',
+            avatar: "https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gMzzgPOXmcAeSl0IxexPI8UzEC0-kbsLB6vG2JYRKNxaCgndcrTcSoL6AD0J3wQSNSdacgRfoWnf0seZg5ZoJYONt8nzA=w1920-h972",
+            roundAvatar: true, // 頭像裁剪成圓形
             description: '懶惰是我前進的動力', // 介紹自己的一句話 or 座右銘
             intro: '/Contact', // 個人介紹頁面的 path
             // medias:{Gmail:'https://mail.google.com/mail/u/0/?to=pickupcamry@gmail.com&fs=1&tf=cm'},
