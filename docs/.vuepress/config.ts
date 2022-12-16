@@ -10,7 +10,7 @@ export default defineUserConfig({
     // lang: 'en-US',
     lang: 'zh-TW',
     title: '全自動股票管理表',
-    description: '一份專為懶人而生的股票管理表。功能豐富、完整，還自動化!! 讓你輕輕鬆鬆管理股票',
+    // description: '一份專為懶人而生的股票管理表。功能豐富、完整，還自動化!! 讓你輕輕鬆鬆管理股票',
     head: [
         ['meta', { name: 'google-site-verification', content: 'KoSwtocMBBPetZW_qAT1plr-FyvpTMWj5Rpt14AUf5s' }],
         [
@@ -19,14 +19,15 @@ export default defineUserConfig({
               src: "https://kit.fontawesome.com/ca37c296c5.js",
               crossorigin: "anonymous",
             },
-        ]
+        ],
+        ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+TC' }],
     ],
     base: '/MyBlog/',
 
     // 主题和它的配置
     theme: hopeTheme({
         // search: true,
-        logo: 'https://vuejs.org/images/logo.png',
+        // logo: 'https://vuejs.org/images/logo.png',
         contributorsText: "作者",
         // lastUpdatedText: "最後更新",
         // breadcrumb: false,
@@ -125,6 +126,7 @@ export default defineUserConfig({
         plugins: {
             mdEnhance: {
                 mark: true, // ==黃底強調==,
+                // presentation: true, // 幻燈片
             },
             blog:  { // 文章列表
                 autoExcerpt: true, // 自動摘要 > 取自 description
@@ -160,7 +162,7 @@ export default defineUserConfig({
         }),
         sitemapPlugin({
             hostname: 'https://lazypisces.github.io/MyBlog/',
-            excludeUrls: ['/test.html'],
+            excludeUrls: ['/test.html','/404.html'],
         }),
         seoPlugin({
             author: '懶魚',

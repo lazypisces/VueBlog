@@ -52,7 +52,7 @@ features:
 
 ### 只要3步驟，讓管理股票像數 1, 2, 3 一樣容易
 
-#### 1. 點選連結 [`台股免費版-建立副本用`](https://docs.google.com/spreadsheets/d/1rchpA3W-BlDn8BZOhQ1uiUPnuHLb4UZ65iLzjHb-cp0/copy) → 點選按鈕 `建立副本`
+#### 1. 點選連結 [`台股免費版-建立副本用(點我)`](https://docs.google.com/spreadsheets/d/1rchpA3W-BlDn8BZOhQ1uiUPnuHLb4UZ65iLzjHb-cp0/copy) → 點選按鈕 `建立副本`
    ::: tip 台股收費版： 在確認收款後將會透過Google寄出系統email，信件內含可建立台股收費版的連結
    :::
 
@@ -88,7 +88,7 @@ features:
 
 #### 補充說明
 
-  :::warning 為了使試算表能更加方便，有寫入一些程式碼做輔助
+  ::: warning 為了使試算表能更加方便，有寫入一些程式碼做輔助
   ex.「抓取現價」「一鍵更新」「台股收費版的自動記錄並圖表化」等，這些功能會需要相應的授權才能使用
 
   此範本已有眾多的人在使用，程式碼也有經過他人的建議和檢核請放心使用
