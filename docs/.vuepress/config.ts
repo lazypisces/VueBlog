@@ -126,7 +126,9 @@ export default defineUserConfig({
         plugins: {
             mdEnhance: {
                 mark: true, // ==黃底強調==,
-                // presentation: true, // 幻燈片
+                presentation: true, // 幻燈片
+                // align: true, // 自定義對齊-可置中(center)或置右對齊(right),beta.66 不能使用
+                // include: true, // 引用其他文件內容,beta.66 不能使用
             },
             blog:  { // 文章列表
                 autoExcerpt: true, // 自動摘要 > 取自 description

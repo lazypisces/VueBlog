@@ -6,15 +6,15 @@ home: true
 # heroImage: /images/台股收費版-儀表板.jpg
 heroText: 全自動股票管理表
 tagline: 一份專為懶人而生的股票管理表，讓你輕輕鬆鬆管理股票
-actionText: 快速上手 →
-actionLink: /StockProfolioDocs/
+# actionText: 快速上手 →
+# actionLink: /StockProfolioDocs/
 
 actions:
   - text: 快速上手 →
     link: /StockProfolioDocs/QuickStart/第一次使用.md
     type: primary
   - text: 試算表預覽
-    link: /StockProfolioDocs/QuickStart/介紹.md#各版本預覽
+    link: /StockProfolioDocs/QuickStart/介紹.md#各版本預覽連結
     type: secondary
 #  - text: Blog
 #    link: /Blog
