@@ -13,6 +13,7 @@ export default defineUserConfig({
     // description: '一份專為懶人而生的股票管理表。功能豐富、完整，還自動化!! 讓你輕輕鬆鬆管理股票',
     head: [
         ['meta', { name: 'google-site-verification', content: 'KoSwtocMBBPetZW_qAT1plr-FyvpTMWj5Rpt14AUf5s' }],
+        ['meta', { httpEquiv: 'refresh', content: '0;url=https://94lanyu.github.io/StockSheet/' }],
         [
             "script", // Fontawesome
             {
